@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author liushuang1515
+ * @author ymmou
  * @since 2023-11-09
  */
 public interface UserShoppingCartService extends IService<UserShoppingCart> {

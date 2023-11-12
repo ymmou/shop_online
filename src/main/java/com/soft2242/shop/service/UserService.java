@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
  *  服务类
  * </p>
  *
- * @author liushuang1515
+ * @author ymmou
  * @since 2023-11-09
  */
 public interface UserService extends IService<User> {

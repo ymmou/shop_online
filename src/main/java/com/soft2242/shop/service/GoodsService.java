@@ -20,7 +20,7 @@ import com.soft2242.shop.vo.RecommendGoodsVO;
  *  服务类
  * </p>
  *
- * @author liushuang1515
+ * @author ymmou
  * @since 2023-11-09
  */
 public interface GoodsService extends IService<Goods> {

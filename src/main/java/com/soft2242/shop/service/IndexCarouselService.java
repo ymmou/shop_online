@@ -10,7 +10,7 @@ import java.util.List;
  *  服务类
  * </p>
  *
- * @author liushuang1515
+ * @author ymmou
  * @since 2023-11-09
  */
 public interface IndexCarouselService extends IService<IndexCarousel> {
