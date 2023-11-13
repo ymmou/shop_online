@@ -11,12 +11,12 @@ import java.util.List;
 public interface AddressConvert {
     AddressConvert INSTANCE = Mappers.getMapper(AddressConvert.class);
 
+    UserShoppingAddress convert(AddressVO addressVO);
 
-    UserShippingAddress convert(AddressVO addressVO);
+    List<AddressVO> convertToAddressVOList(List<UserShoppingAddress> addressList);
 
+    AddressVO convertToAddressVO(UserShoppingAddress userShoppingAddress);
 
-    List<AddressVO> convertToAddressVOList(List<UserShippingAddress> addressList);
-
-
-    AddressVO convertToAddressVO(UserShippingAddress userShippingAddress);
+    class UserShoppingAddress extends UserShippingAddress {
+    }
 }

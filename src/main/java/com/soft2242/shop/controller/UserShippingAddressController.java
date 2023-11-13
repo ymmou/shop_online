@@ -2,7 +2,7 @@ package com.soft2242.shop.controller;
 
 import com.soft2242.shop.common.exception.ServerException;
 import com.soft2242.shop.common.result.Result;
-import com.soft2242.shop.service.UserShippingAddressService;
+//import com.soft2242.shop.service.UserShippingAddressService;
 import com.soft2242.shop.vo.AddressVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -10,6 +10,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 import static com.soft2242.shop.common.utils.ObtainUserIdUtils.getUserId;
 
@@ -45,5 +47,16 @@ public class UserShippingAddressController {
         addressVO.setUserId(getUserId(request));
         Integer addressId = userShippingAddressService.editShippingAddress(addressVO);
         return Result.ok(addressId);
+    }
+    @Operation(summary = "收货地址列表")
+    @GetMapping("address")
+    public Result<List<AddressVO>> getList(HttpServletRequest request) {
+        Integer userId = getUserId(request);
+        List<AddressVO> list = userShippingAddressService.getList(userId);
+        return Result.ok(list);
+
+    }
+
+    private class UserShippingAddressService {
     }
 }
